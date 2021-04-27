@@ -7,7 +7,7 @@ def printGoodsList(ilt):
     for i in range(len(ilt)):
         count+=1
         ilt1=ilt[i]
-        print(format(count,ilt1[0],ilt1[1]))
+        print(tplt.format(count,ilt1[0],ilt1[1]))
         cur.execute(sql,(count,ilt1[0],ilt1[1]))#执行数据库插入操作
     db.commit()
     print('插入成功')
